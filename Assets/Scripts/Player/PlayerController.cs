@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     [Header("基本参数")]
     public float speed;
+    private float runSpeed;
+    private float walkSpeed => speed / 2.5f;
     public float jumpForce;
     //public bool isRun = false;
 
@@ -25,9 +27,22 @@ public class PlayerController : MonoBehaviour
         inputControl = new PlayerInputControl();
 
         inputControl.Gameplay.Jump.started += Jump;
-        //按下K键进行跑步
-        //inputControl.Gameplay.Run.started += Run;
 
+        #region 强制走路
+        runSpeed = speed;
+        //按下K键进行跑步
+        inputControl.Gameplay.Run.performed += ctx => 
+        {
+            if (physicsCheck.isGround)
+                speed = walkSpeed;
+        };
+
+        inputControl.Gameplay.Run.canceled += ctx =>
+        {
+            if (physicsCheck.isGround)
+                speed = runSpeed;
+        };
+        #endregion
         //获得之前要获取
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
