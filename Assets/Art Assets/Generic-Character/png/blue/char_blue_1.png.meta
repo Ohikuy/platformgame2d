@@ -190,13 +190,13 @@ TextureImporter:
     second: char_blue_1_61
   - first:
       213: 2000030947366616055
-    second: char_blue_1_62
+    second: char_blue_1_crouch1-1
   - first:
       213: -270978197614488045
-    second: char_blue_1_63
+    second: char_blue_1_crouch1-2
   - first:
       213: -1343209920777276154
-    second: char_blue_1_64
+    second: char_blue_1_crouch1-3
   - first:
       213: -8379816234284937908
     second: char_blue_1_65
@@ -1597,7 +1597,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_62
+      name: char_blue_1_crouch1-1
       rect:
         serializedVersion: 2
         x: 0
@@ -1618,7 +1618,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_63
+      name: char_blue_1_crouch1-2
       rect:
         serializedVersion: 2
         x: 56
@@ -1639,7 +1639,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_64
+      name: char_blue_1_crouch1-3
       rect:
         serializedVersion: 2
         x: 112
